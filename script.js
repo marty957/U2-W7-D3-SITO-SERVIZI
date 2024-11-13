@@ -73,7 +73,7 @@ const shopItem = function (object) {
   const list = document.createElement("ul");
 
   const singleBook = document.createElement("il");
-  singleBook.innerText = object.title;
+    singleBook.innerText = obj.title;
   list.appendChild(singleBook);
   shop.appendChild(list);
 };
