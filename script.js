@@ -67,13 +67,13 @@ const fetchLibrery = () => {
     })
     .catch((err) => console.log(err));
 };
-
+//funzione per creare la
 const shopItem = function (object) {
   const shop = document.getElementById("shop");
   const list = document.createElement("ul");
 
   const singleBook = document.createElement("il");
-    singleBook.innerText = obj.title;
+  singleBook.innerText = object.title;
   list.appendChild(singleBook);
   shop.appendChild(list);
 };
