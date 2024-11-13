@@ -46,6 +46,14 @@ const fetchLibrery = () => {
           //btn.parentNode.parentNode.remove();
           btn.parentNode.parentNode.style.display = "none";
         };
+        //funzione sul secondo bottone
+        btnBuy.onclick = () => {
+          //shopItem(cardObj);
+          console.log(btnBuy.parentNode);
+          shopItem(obj);
+        };
+
+        //creazione effettiva della row a schermo
 
         cardBody.appendChild(h5);
         cardBody.appendChild(p);
@@ -58,6 +66,16 @@ const fetchLibrery = () => {
       });
     })
     .catch((err) => console.log(err));
+};
+
+const shopItem = function (object) {
+  const shop = document.getElementById("shop");
+  const list = document.createElement("ul");
+
+  const singleBook = document.createElement("il");
+  singleBook.innerText = object.title;
+  list.appendChild(singleBook);
+  shop.appendChild(list);
 };
 
 window.onload = () => [fetchLibrery()];
